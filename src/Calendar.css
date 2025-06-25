@@ -1,0 +1,75 @@
+.calendar-container {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 320px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #2091a3;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.calendar-days-of-week,
+.calendar-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.calendar-day-label {
+  padding: 0.5rem 0;
+  background: #eee;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.calendar-date {
+  padding: 0.75rem 0;
+  border: 1px solid #120e0e;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  transition: background 0.2s;
+}
+
+.calendar-date:hover {
+  background: #cce7ff;
+}
+
+.calendar-date.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.today {
+  background: #5094b5;
+  border-color:black ;
+}
+.booked {
+  background: #4caf50;  /* green background */
+  color: white;
+  border-color: #4caf50;
+  font-weight: bold;
+}
+.notification {
+  padding: 0.5rem;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  animation: fadein 0.3s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
